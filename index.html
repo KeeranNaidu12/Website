@@ -12,25 +12,34 @@
 <body>
     <nav>
         <img src="images/Cool Website.png" alt="" class="logo">
-        <ul>
+        <ul id="menu-links">
             <li>Home</li>
             <li>About</li>
             <li>Projects</i>
             <li>Contact Me</i>
         </ul>
         <button class="nav-btn">Get started</button>
+
+        <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
     </nav>
     <div class="header">
-        <h1><span>FREE</span><br><span>LANCER</span></h1>
+        <div class="header-content">
+        <h1><span>HELLO</span><br><span>THERE</span></h1>
         <div class="btn-container">
             <button class="btn-dark">Request call back</button>
             <button class="btn-light">Know More</button>
         </div>
         <p> I have been programming for 2 years.</p>
+        <div>
         <img src="images/keeran.png" alt="" class="user-img">
     </div>
     <script>
         let navbar = document.querySelector('nav');
+        let menuLinks = document.getElementById("menu-links");
+
+        function toggleMenu(){
+            menuLinks.classList.toggle('show-menu');
+        }
         window.onscroll = function(){
             if(window.scrollY > 0){
                 navbar.style.background = '#eefff9';
