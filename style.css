@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    border-bottom: 1px solid #000;
+    z-index: 10;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+nav .logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+.nav-btn{
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.nav-btn img{
+    width: 16px;
+    margin-left: 8px;
+}
+
+.header{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#fcfde3 40%, #fffaae 49%, #fcff5b 100%);
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header h1{
+    margin-top: 100px;
+    font-size: 4vw;
+    line-height: 4vw;
+}
+
+.btn-container{
+    margin: 20px 0;
+}
+
+.header button{
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn-dark{
+    background: #000;
+    color: #fff;
+    padding: 10px 10px 10px 30px;
+    border-radius: 40px;
+}
+.btn-dark img{
+    width: 40px;
+    background: #000;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+
+.btn-light{
+    background: transpsarent;
+    text-decoration: underline;
+}
+
+.btn-light img{
+    width: 20px;
+    margin-left: 10px;
+}
+
+.header p{
+    max-width: 360px;
+    font-weight: 500;
+}
+
+.user-img{
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    right: 13%;
+    bottom: 0;
+}
+
+/*--------Animation---------*/
+.header h1 span{
+    background: linear-gradient(#000,#000);
+    background-repeat: no-repeat;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 0%;
+}
+.header h1 span:first-child{
+    animation: textcolor1 2s linear infinite alternate;
+}
+.header h1 span:last-child{
+    animation: textcolor1 2s linear infinite alternate;
+}
+
+@keyframes textcolor1{
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 100%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
+
+@keyframes textcolor2{
+    0%{
+        background-size: 0%;
+    }
+    40%{
+        background-size: 0%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}
