@@ -24,7 +24,6 @@ nav ul li{
     margin: 10px 20px;
     font-weight: 500;
     cursor: pointer;
-
 }
 
 nav .logo{
@@ -51,7 +50,7 @@ nav .logo{
 .header{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(#fcfde3 40%, #fffaae 49%, #fcff5b 100%);
+    background: linear-gradient(#c6edff 40%, #9efaff 49%, #5be4ff 100%);
     padding: 0 10%;
     display: flex;
     justify-content: center;
@@ -81,7 +80,7 @@ nav .logo{
 .btn-dark{
     background: #000;
     color: #fff;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 20px;
     border-radius: 40px;
 }
 .btn-dark img{
@@ -109,7 +108,8 @@ nav .logo{
 
 .user-img{
     width: 80%;
-    max-width: 500px;
+    max-width: 400px;
+    max-height: 600px;
     position: absolute;
     right: 13%;
     bottom: 0;
@@ -154,10 +154,11 @@ nav .logo{
     }
 }
 
+
 .menu-icon{
     display: none;
 }
-/* ---Media queries---*/
+/* ---Media queries for navigation---*/
 
 @media only screen and (max-width: 600px){
     nav ul{
