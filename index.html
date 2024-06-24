@@ -10,28 +10,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
     <nav>
         <img src="images/Cool Website.png" alt="" class="logo">
-        <ul id="menu-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</i>
-            <li>Contact Me</i>
+        <ul class="menu-links">
+            <li><a href="#homepage">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#myprojects">Projects</a></li>
+            <li><a href="#contactme">Contact Me</a></li>
         </ul>
-
+        <div class="search-box">
+            <input type="text" placeholder="Search here..">
+            <a href="#"><i class="fas fa-search"></i></a>
+        </div>
         <img src="images/menu.png" alt="" class="menu-icon" onclick="toggleMenu()">
     </nav>
-    <div class="header">
-        <div class="header-content">
-        <h1><span>HELLO</span><br><span>THERE</span></h1>
-        <div class="btn-container">
-            <button class="btn-dark">3rd Year Computer Science</button>
-            <button class="btn-light">Know More</button>
-        </div>
-        <p> I have been programming for 3 years.</p>
-        <div>
-        <img src="images/keeran.png" alt="" class="user-img">
+
+    <div class="home" id="homepage">
+        <h1> Hello There! Welcome to my website!<h1>
     </div>
+   
+
+    <div class="about" id="aboutme">
+        <h1 style="text-align:center" >About<h1>
+           <p style="text-align: left"><img src="images/keeran.png" alt="" class="user-img"> My name is Keeran. I am currently a 3rd year Bsc. Computer Science student. I attend the University of British Columbia.<p>
+        
+    </div>
+
+    <div class="projects" id="myprojects">
+        <h1> My name is Keeran! I am a 3rd year Computer Science Major at the University of British Columbia<h1>
+    </div>
+
+    <div class="contact" id="contactme">
+        <h1> My name is Keeran! I am a 3rd year Computer Science Major at the University of British Columbia<h1>
+    </div>
+
+
     <script>
         let navbar = document.querySelector('nav');
         let menuLinks = document.getElementById("menu-links");
@@ -46,5 +60,6 @@
             navbar.style.background ='transparent';
         }
     </script>
+    </header>
 </body>
 </html>
