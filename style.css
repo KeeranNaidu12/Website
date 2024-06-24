@@ -47,7 +47,7 @@ nav .logo{
     margin-left: 8px;
 }
 
-.header{
+.home{
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(#c6edff 40%, #9efaff 49%, #5be4ff 100%);
@@ -57,103 +57,81 @@ nav .logo{
     flex-direction: column;
 }
 
-.header h1{
+.home h1{
     margin-top: 100px;
     font-size: 4vw;
     line-height: 4vw;
 }
 
-.btn-container{
-    margin: 20px 0;
-}
 
-.header button{
-    border: 0;
-    outline: 0;
-    display: inline-flex;
-    align-items: center;
-    font-size: 18px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.btn-dark{
-    background: #000;
-    color: #fff;
-    padding: 10px 10px 10px 20px;
-    border-radius: 40px;
-}
-.btn-dark img{
-    width: 40px;
-    background: #000;
-    padding: 10px;
-    border-radius: 50%;
-    margin-left: 30px;
-}
-
-.btn-light{
-    background: transpsarent;
-    text-decoration: underline;
-}
-
-.btn-light img{
-    width: 20px;
-    margin-left: 10px;
-}
-
-.header p{
+.home p{
     max-width: 360px;
     font-weight: 500;
 }
 
 .user-img{
-    width: 80%;
+    float: right;
     max-width: 400px;
     max-height: 600px;
-    position: absolute;
-    right: 13%;
-    bottom: 0;
+ /*   position:relative; */
 }
 
-/*--------Animation---------*/
-.header h1 span{
-    background: linear-gradient(#000,#000);
-    background-repeat: no-repeat;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-size: 0%;
-}
-.header h1 span:first-child{
-    animation: textcolor1 2s linear infinite alternate;
-}
-.header h1 span:last-child{
-    animation: textcolor1 2s linear infinite alternate;
+.about{
+    width: 100%;
+    min-height: 150vh;
+    background: linear-gradient(#c5ffbc 40%, #71ffa0 49%, #3dff5a 100%);
+    padding: 0 10%;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@keyframes textcolor1{
-    0%{
-        background-size: 0%;
-    }
-    40%{
-        background-size: 100%;
-    }
-    100%{
-        background-size: 100%;
-    }
+.about h1{
+    font-size: 4vw;
+    line-height: 4vw;
 }
 
-@keyframes textcolor2{
-    0%{
-        background-size: 0%;
-    }
-    40%{
-        background-size: 0%;
-    }
-    100%{
-        background-size: 100%;
-    }
+.about p{
+    font-size: 2vw;
+    line-height: 2vw;
 }
 
+.projects{
+    width: 100%;
+    min-height: 150vh;
+    background: linear-gradient(#ff9696 40%, #ff6464 49%, #ff3d3d 100%);
+    padding: 0 10%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projects h1{
+    font-size: 4vw;
+    line-height: 4vw;
+}
+
+.projects p{
+    font-size: 2vw;
+    line-height: 2vw;
+}
+
+.contact{
+    width: 100%;
+    min-height: 150vh;
+    background: linear-gradient(#e0aeff 40%, #d683ff 49%, #cb3dff 100%);
+    padding: 0 10%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact h1{
+    font-size: 4vw;
+    line-height: 4vw;
+}
+
+.contact p{
+    font-size: 2vw;
+    line-height: 2vw;
+}
 
 .menu-icon{
     display: none;
@@ -191,9 +169,9 @@ nav .logo{
     }
 }
 
-/*--- Media Queries for header content ---- */
+/*--- Media Queries for home content ---- */
 @media only screen and (max-width: 600px){
-    .header{
+    .home{
         min-height: auto;
         padding: 0;
     }
@@ -204,7 +182,7 @@ nav .logo{
         margin-top: 100px;
     }
 
-    .header-content{
+    .home-content{
         position: absolute;
         bottom:0;
         padding:0 10%;
@@ -215,7 +193,7 @@ nav .logo{
     .btn-container{
         margin: 5px 0;
     }
-    .header button{
+    .home button{
         font-size: 14px;
         margin-right: 10px;
     }
@@ -232,7 +210,7 @@ nav .logo{
         width: 12px;
         margin-left: 5px;
     }
-    .header h1{
+    .home h1{
         font-size: 70px;
         line-height: 60px;
         margin-bottom: 20px;
