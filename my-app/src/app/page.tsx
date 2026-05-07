@@ -1,22 +1,57 @@
+import Technology from "./components/Technology";
+
+const technologies = [
+  { name: "Python", icon: "/icons/Python.svg" },
+  { name: "Java", icon: "/icons/Java.svg" },
+  { name: "JavaScript", icon: "/icons/JavaScript.svg" },
+  { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+  { name: "PHP", icon: "/icons/PHP.svg" },
+  { name: "HTML", icon: "/icons/HTML.svg" },
+  { name: "CSS", icon: "/icons/CSS.svg" },
+];
 
 export default function Home() {
   return (
     <div>
       <main>
-        <section className="flex items-center gap-6 p-6 bg-blue-900">
-          <div className="bg-amber-600 font-bold rounded-2xl p-5">
-            <p className="text-4xl">Hi there!</p>
-            <p className="text-4xl">My name is Keeran Naidu.</p>
-            <p className="text-4xl">UBC Computer Science graduate</p>
-            <p className="text-4xl">Interested in software development and data analysis</p>
-            <p className="text-4xl">Buidling systems that make an impact</p>
-          </div>
+        <section
+          id="about"
+          className="bg-slate-950 text-slate-100 min-h-[80vh]"
+        >
+          <div className="max-w-6xl mx-auto flex items-center gap-10 px-10 py-20">
+            <div className="max-w-2xl">
+              <p className="text-lg text-sky-400 font-bold">Hi there, I'm</p>
+              <h1 className="text-6xl font-bold mt-2">Keeran Naidu.</h1>
+              <p className="text-2xl text-slate-300 mt-4">
+                UBC Computer Science graduate.
+              </p>
+              <p className="text-lg text-slate-400 mt-6 leading-relaxed">
+                Interested in software development and data analysis by creating
+                systems that make an impact.
+              </p>
+            </div>
 
-          <img
-            src="/KeeranNaidu.png"
-            alt="Keeran Naidu"
-            className="w-100 h-100 rounded-full object-cover object-bottom"
-          />
+            <img
+              src="/KeeranNaidu.png"
+              alt="Keeran Naidu"
+              className="w-72 h-72 rounded-full object-cover object-bottom ring-4 ring-sky-500/30"
+            />
+          </div>
+        </section>
+
+        <section
+          id="skills"
+          className="bg-slate-800 text-slate-100 min-h-[80vh]"
+        >
+          <h1 className="p-10 text-4xl font-bold text-center text-sky-400">Technologies I have worked with</h1>
+          <div className="max-w-6xl mx-auto flex items-center gap-10 px-10 py-20">
+        
+            <div className="max-w-2xl">
+              {technologies.map((t) => (
+                <Technology key={t.name} name={t.name} icon={t.icon} />
+              ))}
+            </div>
+          </div>
         </section>
       </main>
     </div>
