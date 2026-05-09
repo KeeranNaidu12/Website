@@ -20,10 +20,14 @@ const technologies = [
 export default function Home() {
   return (
     <div>
-      <main>
+      <main className="relative overflow-hidden bg-slate-950">
+        {/* Shared ambient glows behind both sections */}
+        <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute top-[60%] -right-32 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
+
         <section
           id="about"
-          className="bg-slate-950 text-slate-100 min-h-[40vh]"
+          className="relative bg-transparent text-slate-100 min-h-[40vh]"
         >
           <div className="max-w-6xl mx-auto flex items-center gap-10 px-10 py-20">
             <div className="max-w-2xl">
@@ -48,12 +52,15 @@ export default function Home() {
 
         <section
           id="skills"
-          className="bg-slate-800 text-slate-100 min-h-[80vh]"
+          className="relative bg-transparent text-slate-100 min-h-[80vh]"
         >
-          <h1 className="p-10 text-4xl font-bold text-center text-sky-400">Technologies I have worked with</h1>
-          <div className="max-w-6xl mx-auto flex items-center gap-10 px-10 py-20">
-        
-            <div className="flex flex-wrap justify-center itmes-center gap-4">
+          <div className="relative max-w-5xl mx-auto px-6 py-24">
+            <p className="text-xs uppercase tracking-[0.3em] text-sky-400/80 text-center">Tech Stack</p>
+            <h2 className="mt-3 text-3xl sm:text-5xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+              Technologies I have worked with
+            </h2>
+
+            <div className="mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
               {technologies.map((t) => (
                 <Technology key={t.name} name={t.name} icon={t.icon} />
               ))}

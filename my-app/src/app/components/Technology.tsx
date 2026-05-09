@@ -7,17 +7,14 @@ type TechnologyProps ={
 
 export default function Technology({name,icon} : TechnologyProps){
     return (
-      <div className="flex flex-col items-center gap-2 m-10">
-        <div className="relative group">
-          <div
-            role="tooltip"
-            className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-black px-2 py-1 text-sm text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100"
-          >
-            {name}
-          </div>
+      <div className="relative group">
+        <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md border border-sky-400/40 bg-slate-900 px-2 py-1 text-xs font-medium text-sky-100 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+          {name}
+        </div>
 
-          <div className="p-10 m-5 rounded-2xl bg-gray-900 transition-colors duration-150 group-hover:bg-gray-700 cursor-pointer">
-            <img src={icon} alt={name} className="w-16 h-16" />
+        <div className="flex items-center justify-center aspect-square rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 group-hover:border-sky-400/60 group-hover:-translate-y-1 group-hover:shadow-[0_0_20px_-4px_rgba(56,189,248,0.6)]">
+          <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-white/90">
+            <img src={icon} alt={name} className="w-9 h-9" />
           </div>
         </div>
       </div>
