@@ -43,6 +43,7 @@ export default function Projects() {
                 link="https://battlebee12.itch.io/plata-boom"
               />
           </div>
+          </div>
         </section>
       </main>
     </div>
