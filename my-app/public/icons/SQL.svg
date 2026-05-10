@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-label="SQL">
+  <title>SQL</title>
+  <g fill="#00618a">
+    <ellipse cx="12" cy="4.2" rx="8" ry="2.4"></ellipse>
+    <path d="M4 6.2v3.6c0 1.3 3.6 2.4 8 2.4s8-1.1 8-2.4V6.2c-1.6 1-4.6 1.6-8 1.6s-6.4-.6-8-1.6z"></path>
+    <path d="M4 11.6v3.6c0 1.3 3.6 2.4 8 2.4s8-1.1 8-2.4v-3.6c-1.6 1-4.6 1.6-8 1.6s-6.4-.6-8-1.6z"></path>
+    <path d="M4 17v3c0 1.3 3.6 2.4 8 2.4s8-1.1 8-2.4v-3c-1.6 1-4.6 1.6-8 1.6S5.6 18 4 17z"></path>
+  </g>
+</svg>

@@ -2,12 +2,13 @@ import Technology from "./components/Technology";
 
 const technologies = [
   { name: "Python", icon: "/icons/Python.svg" },
-  { name: "Java", icon: "/icons/Java.svg" },
-  { name: "JavaScript", icon: "/icons/JavaScript.svg" },
-  { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+  { name: "Java", icon: "/icons/Java.png" },
+  { name: "JavaScript", icon: "/icons/JavaScript.png" },
+  { name: "TypeScript", icon: "/icons/TypeScript.png" },
   { name: "PHP", icon: "/icons/PHP.svg" },
   { name: "HTML", icon: "/icons/HTML.svg" },
   { name: "CSS", icon: "/icons/CSS.svg" },
+  { name: "SQL", icon: "/icons/SQL.svg" },
   { name: "React", icon: "/icons/React.svg" },
   { name: "Next.js", icon: "/icons/Next.js.svg" },
   { name: "Node.js", icon: "/icons/Node.js.svg" },
@@ -15,13 +16,21 @@ const technologies = [
   { name: "Django", icon: "/icons/Django.svg" },
   { name: "FastAPI", icon: "/icons/FastAPI.svg" },
   { name: "Spring Boot", icon: "/icons/Spring Boot.svg" },
+  { name: "MySQL", icon: "/icons/MySQL.svg" },
+  { name: "PostgreSQL", icon: "/icons/PostgreSQL.svg" },
+  { name: "Firebase", icon: "/icons/Firebase.svg" },
+  { name: "Supabase", icon: "/icons/Supabase.svg" },
+  { name: "Docker", icon: "/icons/Docker.svg" },
+  { name: "GitHub", icon: "/icons/GitHub.svg" },
+  { name: "Excel", icon: "/icons/Excel.png" },
+  { name: "Tableau", icon: "/icons/Tableau.png" },
+  { name: "Power BI", icon: "/icons/Power BI.svg" }
 ];
 
 export default function Home() {
   return (
     <div>
       <main className="relative overflow-hidden bg-slate-950">
-        {/* Shared ambient glows behind both sections */}
         <div className="pointer-events-none absolute -top-32 -left-32 h-96 w-96 rounded-full bg-sky-500/20 blur-3xl" />
         <div className="pointer-events-none absolute top-[60%] -right-32 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
 
@@ -54,13 +63,13 @@ export default function Home() {
           id="skills"
           className="relative bg-transparent text-slate-100 min-h-[80vh]"
         >
-          <div className="relative max-w-5xl mx-auto px-6 py-24">
+          <div className="relative max-w-7xl mx-auto px-6 py-24">
             <p className="text-xs uppercase tracking-[0.3em] text-sky-400/80 text-center">Tech Stack</p>
-            <h2 className="mt-3 text-3xl sm:text-5xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+            <h2 className="mt-3 mb-6 pb-2 text-3xl sm:text-5xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
               Technologies I have worked with
             </h2>
 
-            <div className="mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
+            <div className="mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-6">
               {technologies.map((t) => (
                 <Technology key={t.name} name={t.name} icon={t.icon} />
               ))}
