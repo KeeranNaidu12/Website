@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Office Hours">
+  <title>Office Hours</title>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#0a0a0a" stroke-width="3"></circle>
+  <line x1="50" y1="50" x2="50" y2="28" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round"></line>
+  <line x1="50" y1="50" x2="68" y2="50" stroke="#0a0a0a" stroke-width="3.5" stroke-linecap="round"></line>
+  <circle cx="50" cy="50" r="2.5" fill="#0a0a0a"></circle>
+</svg>
