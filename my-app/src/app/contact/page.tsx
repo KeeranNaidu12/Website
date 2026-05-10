@@ -1,65 +1,49 @@
 
+const contacts = [
+  { label: "GitHub", href: "https://github.com/KeeranNaidu12", icon: "/icons/GitHub.svg" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/keeran-naidu-a28012260/", icon: "/icons/LinkedIn.svg" },
+  { label: "Email", href: "mailto:keerannaidu08@gmail.com", icon: "/icons/Mail.svg" },
+];
+
 export default function Contact() {
   return (
-    <div>
-      <main className="relative overflow-hidden bg-slate-950">
-        <section>
-          <h1 className="text-center text-blue-400 text-2xl">
-            {" "}
-            Want to contact me?{" "}
-          </h1>
-          <h2 className="text-center text-blue-400 text-xl">
-            These are the best ways of reaching out to me, in this order.
-          </h2>
+    <main className="min-h-screen bg-slate-950 px-6 py-20">
+      <section className="mx-auto max-w-2xl">
+        <p className="text-sm uppercase tracking-[0.3em] text-sky-400/80 text-center">
+          Contact
+        </p>
+        <h1 className="mb-10 text-center text-3xl font-semibold tracking-tight bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+          Get in touch
+        </h1>
 
-          <div>
-            <ul className="flex flex-col gap-2">
-              <li>
-                <a>
-                  <div className="">
-                    <img
-                      src="/icons/GitHub.svg"
-                      alt="GitHub"
-                      className="w-10 h-10 rounded-full object-cover object-bottom ring-4 bg-white ring-sky-500/30"
-                    />
-                    GitHub
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a>
+        <ul className="flex flex-col gap-4">
+          {contacts.map(({ label, href, icon }) => {
+            const external = href.startsWith("http");
+            return (
+              <li key={label}>
+                <a
+                  href={href}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className="group flex items-center gap-4 rounded-2xl border border-slate-800 bg-slate-900/60 p-4 transition hover:border-sky-500/60 hover:bg-slate-900"
+                >
                   <img
-                    src="/icons/LinkedIn.svg"
-                    alt="LinkedIn"
-                    className="w-10 h-10 rounded-full object-cover object-bottom  bg-white ring-4 ring-sky-500/30"
+                    src={icon}
+                    alt={label}
+                    className="h-10 w-10 rounded-full bg-white p-2"
                   />
-                  LinkedIn
+                  <span className="text-lg font-medium text-slate-100 group-hover:text-sky-400">
+                    {label}
+                  </span>
+                  <span className="ml-auto text-slate-500 transition group-hover:translate-x-1 group-hover:text-sky-400">
+                    →
+                  </span>
                 </a>
               </li>
-              <li>
-                <a>
-                  <img
-                    src="/icons/Mail.svg"
-                    alt="GitHub"
-                    className="w-10 h-10 rounded-full object-cover object-bottom ring-4 ring-sky-500/30"
-                  />
-                  Email
-                </a>
-              </li>
-              <li>
-                <a>
-                  <img
-                    src="/icons/Office Hours.svg"
-                    alt="Office Hours"
-                    className="w-10 h-10 rounded-full object-cover object-bottom ring-4 ring-sky-500/30"
-                  />
-                  Office Hours
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    </div>
+            );
+          })}
+        </ul>
+      </section>
+    </main>
   );
 }
