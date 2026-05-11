@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Microsoft Excel">
+  <title>Microsoft Excel</title>
+  
+  <g>
+    <rect x="38" y="14" width="50" height="72" rx="2" fill="#fff" stroke="#107c41" stroke-width="2"></rect>
+    
+    <rect x="40" y="16" width="46" height="10" fill="#107c41"></rect>
+    
+    <g stroke="#107c41" stroke-width="1.2">
+      <line x1="40" y1="38" x2="86" y2="38"></line>
+      <line x1="40" y1="50" x2="86" y2="50"></line>
+      <line x1="40" y1="62" x2="86" y2="62"></line>
+      <line x1="40" y1="74" x2="86" y2="74"></line>
+      <line x1="55" y1="26" x2="55" y2="84"></line>
+      <line x1="70" y1="26" x2="70" y2="84"></line>
+    </g>
+  </g>
+  
+  <rect x="6" y="22" width="46" height="56" rx="3" fill="#107c41"></rect>
+  
+  <path d="M16 36 L24 36 L29 44 L34 36 L42 36 L33 50 L42 64 L34 64 L29 56 L24 64 L16 64 L25 50 Z" fill="#ffffff"></path>
+</svg>
