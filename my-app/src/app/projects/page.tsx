@@ -5,15 +5,15 @@ export default function Projects() {
     <div>
       <main className="relative overflow-hidden bg-slate-950">
         <section>
-          <div className="w-full mx-auto px-4 sm:px-6 py-24">
-            <p className="text-sm uppercase tracking-[0.3em] text-sky-400/80 text-center">
+          <div className="w-full mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-sky-400/80 text-center">
               Projects
             </p>
-            <h1 className="mt-3 text-4xl sm:text-6xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+            <h1 className="mt-3 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
               This is what I have worked on
             </h1>
 
-            <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="mt-8 sm:mt-14 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               <Project
                 name="Personal Website"
                 image="/project_icons/website.png"

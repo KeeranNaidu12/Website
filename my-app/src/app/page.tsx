@@ -38,14 +38,14 @@ export default function Home() {
           id="about"
           className="relative bg-transparent text-slate-100 min-h-[40vh]"
         >
-          <div className="max-w-6xl mx-auto flex items-center gap-10 px-10 py-20">
+          <div className="max-w-6xl mx-auto flex items-center gap-4 sm:gap-6 md:gap-10 px-4 sm:px-6 md:px-10 py-10 sm:py-14 md:py-20">
             <div className="max-w-2xl">
-              <p className="text-lg text-sky-400 font-bold">Hi there, I'm</p>
-              <h1 className="text-6xl font-bold mt-2">Keeran Naidu.</h1>
-              <p className="text-2xl text-slate-300 mt-4">
+              <p className="text-sm sm:text-base md:text-lg text-sky-400 font-bold">Hi there, I'm</p>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2">Keeran Naidu.</h1>
+              <p className="text-base sm:text-lg md:text-2xl text-slate-300 mt-4">
                 UBC Computer Science graduate.
               </p>
-              <p className="text-lg text-slate-400 mt-6 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-slate-400 mt-4 sm:mt-6 leading-relaxed">
                 Interested in software development and data analysis by creating
                 systems that make an impact.
               </p>
@@ -54,7 +54,7 @@ export default function Home() {
             <img
               src="/KeeranNaidu.png"
               alt="Keeran Naidu"
-              className="w-72 h-72 rounded-full object-cover object-bottom ring-4 ring-sky-500/30"
+              className="w-28 h-28 sm:w-44 sm:h-44 md:w-60 md:h-60 lg:w-72 lg:h-72 shrink-0 rounded-full object-cover object-bottom ring-4 ring-sky-500/30"
             />
           </div>
         </section>
@@ -63,13 +63,13 @@ export default function Home() {
           id="skills"
           className="relative bg-transparent text-slate-100 min-h-[80vh]"
         >
-          <div className="relative max-w-7xl mx-auto px-6 py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 md:py-24">
             <p className="text-xs uppercase tracking-[0.3em] text-sky-400/80 text-center">Tech Stack</p>
-            <h2 className="mt-3 mb-6 pb-2 text-3xl sm:text-5xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+            <h2 className="mt-3 mb-6 pb-2 text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight text-center bg-gradient-to-r from-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
               Technologies I have worked with
             </h2>
 
-            <div className="mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-6">
+            <div className="mt-8 sm:mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-3 sm:gap-4 md:gap-6">
               {technologies.map((t) => (
                 <Technology key={t.name} name={t.name} icon={t.icon} />
               ))}

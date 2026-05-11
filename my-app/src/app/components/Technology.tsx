@@ -13,8 +13,8 @@ export default function Technology({name,icon} : TechnologyProps){
         </div>
 
         <div className="flex items-center justify-center aspect-square rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 group-hover:border-sky-400/60 group-hover:-translate-y-1 group-hover:shadow-[0_0_20px_-4px_rgba(56,189,248,0.6)]">
-          <div className="flex items-center justify-center w-20 h-20 rounded-xl bg-white">
-            <img src={icon} alt={name} className="w-14 h-14" />
+          <div className="flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-xl bg-white">
+            <img src={icon} alt={name} className="w-7 h-7 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14" />
           </div>
         </div>
       </div>
