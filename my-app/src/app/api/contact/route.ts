@@ -1,12 +1,10 @@
 import { Resend } from "resend";
-import { Redis } from "@upstash/redis";
-import { Ratelimit } from "@upstash/ratelimit";
 
-const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.fixedWindow(3, "1 d"),
-  prefix: "contact",
-});
+const lastSent = new Map<string, string>();
+
+function today() {
+  return new Date().toISOString().slice(0, 10);
+}
 
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -16,11 +14,11 @@ export async function POST(request: Request) {
     request.headers.get("x-real-ip") ||
     "unknown";
 
-  const { success } = await ratelimit.limit(ip);
-  if (!success) {
-    return new Response("Too many messages. Please try again tomorrow.", {
-      status: 429,
-    });
+  if (lastSent.get(ip) === today()) {
+    return new Response(
+      "You've already sent a message today. Please try again tomorrow.",
+      { status: 429 },
+    );
   }
 
   const data = await request.formData();
@@ -57,5 +55,6 @@ export async function POST(request: Request) {
     return new Response("Failed to send message", { status: 500 });
   }
 
+  lastSent.set(ip, today());
   return new Response("OK", { status: 200 });
 }

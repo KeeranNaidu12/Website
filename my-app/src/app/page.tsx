@@ -2,9 +2,9 @@ import Technology from "./components/Technology";
 
 const technologies = [
   { name: "Python", icon: "/icons/Python.svg" },
-  { name: "Java", icon: "/icons/Java.png" },
-  { name: "JavaScript", icon: "/icons/JavaScript.png" },
-  { name: "TypeScript", icon: "/icons/TypeScript.png" },
+  { name: "Java", icon: "/icons/Java.svg" },
+  { name: "JavaScript", icon: "/icons/JavaScript.svg" },
+  { name: "TypeScript", icon: "/icons/TypeScript.svg" },
   { name: "PHP", icon: "/icons/PHP.svg" },
   { name: "HTML", icon: "/icons/HTML.svg" },
   { name: "CSS", icon: "/icons/CSS.svg" },
@@ -22,8 +22,8 @@ const technologies = [
   { name: "Supabase", icon: "/icons/Supabase.svg" },
   { name: "Docker", icon: "/icons/Docker.svg" },
   { name: "GitHub", icon: "/icons/GitHub.svg" },
-  { name: "Excel", icon: "/icons/Excel.png" },
-  { name: "Tableau", icon: "/icons/Tableau.png" },
+  { name: "Excel", icon: "/icons/Excel.svg" },
+  { name: "Tableau", icon: "/icons/Tableau.svg" },
   { name: "Power BI", icon: "/icons/Power BI.svg" }
 ];
 
