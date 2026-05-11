@@ -75,10 +75,10 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-10 lg:col-span-3"
+      className="flex flex-col gap-4 sm:gap-6 rounded-2xl border border-slate-800 bg-slate-900/60 p-5 sm:p-7 md:p-10 lg:col-span-3"
     >
       <div className="flex flex-col gap-2">
-        <label htmlFor="name" className="text-xl text-slate-200">
+        <label htmlFor="name" className="text-base sm:text-xl text-slate-200">
           Name <span className="text-red-400">*</span>
         </label>
         <input
@@ -86,13 +86,13 @@ export default function ContactForm() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="bg-slate-800 rounded-md px-4 py-4 text-lg text-white"
+          className="bg-slate-800 rounded-md px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white"
         />
         {nameError && <p className="text-sm text-red-400">{nameError}</p>}
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-xl text-slate-200">
+        <label htmlFor="email" className="text-base sm:text-xl text-slate-200">
           Email <span className="text-red-400">*</span>
         </label>
         <input
@@ -100,13 +100,13 @@ export default function ContactForm() {
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="bg-slate-800 rounded-md px-4 py-4 text-lg text-white"
+          className="bg-slate-800 rounded-md px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white"
         />
         {emailError && <p className="text-sm text-red-400">{emailError}</p>}
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="text-xl text-slate-200">
+        <label htmlFor="message" className="text-base sm:text-xl text-slate-200">
           Message <span className="text-red-400">*</span>
         </label>
         <textarea
@@ -114,7 +114,7 @@ export default function ContactForm() {
           rows={10}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="bg-slate-800 rounded-md px-4 py-4 text-lg text-white resize-none"
+          className="bg-slate-800 rounded-md px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg text-white resize-none"
         />
         {messageError && <p className="text-sm text-red-400">{messageError}</p>}
       </div>
@@ -130,7 +130,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="self-start rounded-md bg-sky-500 px-7 py-3 text-lg font-medium text-white hover:bg-sky-400"
+        className="self-start rounded-md bg-sky-500 px-5 sm:px-7 py-2.5 sm:py-3 text-base sm:text-lg font-medium text-white hover:bg-sky-400"
       >
         Send message
       </button>

@@ -1,25 +1,7 @@
 import { Resend } from "resend";
 
-const lastSent = new Map<string, string>();
-
-function today() {
-  return new Date().toISOString().slice(0, 10);
-}
-
 export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
-
-  const ip =
-    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
-    request.headers.get("x-real-ip") ||
-    "unknown";
-
-  if (lastSent.get(ip) === today()) {
-    return new Response(
-      "You've already sent a message today. Please try again tomorrow.",
-      { status: 429 },
-    );
-  }
 
   const data = await request.formData();
   const name = String(data.get("name") ?? "");
@@ -55,6 +37,5 @@ export async function POST(request: Request) {
     return new Response("Failed to send message", { status: 500 });
   }
 
-  lastSent.set(ip, today());
   return new Response("OK", { status: 200 });
 }
