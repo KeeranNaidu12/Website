@@ -2,8 +2,8 @@ import Technology from "./components/Technology";
 
 const technologies = [
   { name: "Python", icon: "/icons/Python.svg" },
-  { name: "Java", icon: "/icons/Java.svg" },
-  { name: "JavaScript", icon: "/icons/JavaScript.svg" },
+  { name: "Java", icon: "/icons/Java.png" },
+  { name: "JavaScript", icon: "/icons/JavaScript.png" },
   { name: "TypeScript", icon: "/icons/TypeScript.svg" },
   { name: "PHP", icon: "/icons/PHP.svg" },
   { name: "HTML", icon: "/icons/HTML.svg" },
@@ -14,7 +14,7 @@ const technologies = [
   { name: "Node.js", icon: "/icons/Node.js.svg" },
   { name: "Express.js", icon: "/icons/Express.js.svg" },
   { name: "Django", icon: "/icons/Django.svg" },
-  { name: "FastAPI", icon: "/icons/FastAPI.svg" },
+  { name: "FastAPI", icon: "/icons/Fastapi.png" },
   { name: "Spring Boot", icon: "/icons/Spring Boot.svg" },
   { name: "MySQL", icon: "/icons/MySQL.svg" },
   { name: "PostgreSQL", icon: "/icons/PostgreSQL.svg" },
@@ -23,7 +23,7 @@ const technologies = [
   { name: "Docker", icon: "/icons/Docker.svg" },
   { name: "GitHub", icon: "/icons/GitHub.svg" },
   { name: "Excel", icon: "/icons/Excel.svg" },
-  { name: "Tableau", icon: "/icons/Tableau.svg" },
+  { name: "Tableau", icon: "/icons/Tableau.png" },
   { name: "Power BI", icon: "/icons/Power BI.svg" }
 ];
 
