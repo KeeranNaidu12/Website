@@ -13,7 +13,7 @@ export default function NavBar(){
           </a>
           <div className="flex flex-row items-center gap-3">
             <a href="/" className="text-lg font-medium px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">Who am I?</a>
-            <a href="#skills" className="text-lg font-medium px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">Skills</a>
+            <a href="/#skills" className="text-lg font-medium px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">Skills</a>
             <a href="/projects" className="text-lg font-medium px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">Projects</a>
             <a href="/contact" className="text-lg font-medium px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors">Contact</a>
           </div>
