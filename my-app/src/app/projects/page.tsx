@@ -32,11 +32,11 @@ export default function Projects() {
               />
               <Project
                 name="Toronto Crime Analysis"
-                image=""
+                image="/project_icons/CrimeAnalysis.png"
                 description="Analyzed the crime for Toronto neighbours. Created safety scores to rank neighbourhoods and understand which kinds of crime occur in specific neighbourhoods. Additionally, created LightGBM models to predict assault, auto theft, break and enter and traffic incidents. "
                 date="March 2026 - April 2026"
                 github="https://github.com/KeeranNaidu12/CrimeAnalysis.git"
-                tech={["Python","PostgreSQL", "Power BI"]}
+                tech={["Python", "PostgreSQL", "Power BI"]}
               />
               <Project
                 name="Examinator"
