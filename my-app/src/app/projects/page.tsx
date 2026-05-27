@@ -33,7 +33,7 @@ export default function Projects() {
               <Project
                 name="Toronto Crime Analysis"
                 image="/project_icons/CrimeAnalysis.png"
-                description="Analyzed the crime for Toronto neighbours. Created safety scores to rank neighbourhoods and understand which kinds of crime occur in specific neighbourhoods. Additionally, created LightGBM models to predict assault, auto theft, break and enter and traffic incidents. "
+                description="Analyzed the crime for Toronto neighbours. Created safety scores to rank neighbourhoods and understand which kinds of crime occur in specific neighbourhoods. Additionally, created LightGBM models to predict assault, auto theft, break and enter and traffic incidents. The analytics are live-hosted for public access. "
                 date="March 2026 - April 2026"
                 github="https://github.com/KeeranNaidu12/CrimeAnalysis.git"
                 link="https://victorious-flower-0fa5e4b10.2.azurestaticapps.net"
