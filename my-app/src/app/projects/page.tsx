@@ -36,7 +36,6 @@ export default function Projects() {
                 description="Processed 11 Toronto Police Service crime and traffic datasets and supported ETL cleaning before batch-loading into PostgreSQL. Engineered Python-based safety scores using year-decay weighting and crime severity factors and then validated score distributions and neighbourhood rankings to support two interactive Power BI dashboards on crime trends and traffic collisions."
                 date="March 2026 - April 2026"
                 github="https://github.com/KeeranNaidu12/CrimeAnalysis.git"
-                link="https://victorious-flower-0fa5e4b10.2.azurestaticapps.net"
                 tech={["Python", "PostgreSQL", "Power BI"]}
               />
               <Project
