@@ -1,30 +1,64 @@
 import Technology from "./components/Technology";
 
-const technologies = [
-  { name: "Python", icon: "/icons/Python.svg" },
-  { name: "Java", icon: "/icons/Java.png" },
-  { name: "JavaScript", icon: "/icons/JavaScript.png" },
-  { name: "TypeScript", icon: "/icons/TypeScript.svg" },
-  { name: "PHP", icon: "/icons/PHP.svg" },
-  { name: "HTML", icon: "/icons/HTML.svg" },
-  { name: "CSS", icon: "/icons/CSS.svg" },
-  { name: "SQL", icon: "/icons/SQL.svg" },
-  { name: "React", icon: "/icons/React.svg" },
-  { name: "Next.js", icon: "/icons/Next.js.svg" },
-  { name: "Node.js", icon: "/icons/Node.js.svg" },
-  { name: "Express.js", icon: "/icons/Express.js.svg" },
-  { name: "Django", icon: "/icons/Django.svg" },
-  { name: "FastAPI", icon: "/icons/Fastapi.png" },
-  { name: "Spring Boot", icon: "/icons/Spring Boot.svg" },
-  { name: "MySQL", icon: "/icons/MySQL.svg" },
-  { name: "PostgreSQL", icon: "/icons/PostgreSQL.svg" },
-  { name: "Firebase", icon: "/icons/Firebase.svg" },
-  { name: "Supabase", icon: "/icons/Supabase.svg" },
-  { name: "Docker", icon: "/icons/Docker.svg" },
-  { name: "GitHub", icon: "/icons/GitHub.svg" },
-  { name: "Excel", icon: "/icons/Excel.svg" },
-  { name: "Tableau", icon: "/icons/Tableau.png" },
-  { name: "Power BI", icon: "/icons/Power BI.svg" }
+const techCategories = [
+  {
+    title: "Languages",
+    items: [
+      { name: "Python", icon: "/icons/Python.svg" },
+      { name: "Java", icon: "/icons/Java.png" },
+      { name: "JavaScript", icon: "/icons/JavaScript.png" },
+      { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+      { name: "PHP", icon: "/icons/PHP.svg" },
+      { name: "SQL", icon: "/icons/SQL.svg" },
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      { name: "React", icon: "/icons/React.svg" },
+      { name: "Next.js", icon: "/icons/Next.js.svg" },
+      { name: "HTML", icon: "/icons/HTML.svg" },
+      { name: "CSS", icon: "/icons/CSS.svg" },
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      { name: "Node.js", icon: "/icons/Node.js.svg" },
+      { name: "Express.js", icon: "/icons/Express.js.svg" },
+      { name: "Django", icon: "/icons/Django.svg" },
+      { name: "FastAPI", icon: "/icons/Fastapi.png" },
+      { name: "Spring Boot", icon: "/icons/Spring Boot.svg" },
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      { name: "MySQL", icon: "/icons/MySQL.svg" },
+      { name: "PostgreSQL", icon: "/icons/PostgreSQL.svg" },
+      { name: "Firebase", icon: "/icons/Firebase.svg" },
+      { name: "Supabase", icon: "/icons/Supabase.svg" },
+    ],
+  },
+  {
+    title: "DevOps & Tools",
+    items: [
+      { name: "Docker", icon: "/icons/Docker.svg" },
+      { name: "GitHub", icon: "/icons/GitHub.svg" },
+      { name: "Vercel", icon: "/icons/Vercel.png" },
+      { name: "Excel", icon: "/icons/Excel.svg" },
+      { name: "Tableau", icon: "/icons/Tableau.png" },
+      { name: "Power BI", icon: "/icons/Power BI.svg" },
+    ],
+  },
+];
+
+const interests = [
+  "Software Engineering",
+  "Data Analysis",
+  "Machine Learning",
+  "Artificial Intelligence",
+  "Game Development",
 ];
 
 export default function Home() {
@@ -43,12 +77,23 @@ export default function Home() {
               <p className="text-sm sm:text-base md:text-lg text-sky-400 font-bold">Hi there, I'm</p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mt-2">Keeran Naidu.</h1>
               <p className="text-base sm:text-lg md:text-2xl text-slate-300 mt-4">
-                UBC Computer Science graduate.
+                UBCO Computer Science graduate.
               </p>
-              <p className="text-sm sm:text-base md:text-lg text-slate-400 mt-4 sm:mt-6 leading-relaxed">
-                Interested in software development and data analysis by creating
-                systems that make an impact.
-              </p>
+              <div className="mt-4 sm:mt-6 rounded-xl border border-indigo-500/40 bg-indigo-500/10 px-4 sm:px-5 py-3 sm:py-4">
+                <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
+                  I'm looking to grow my career in tech and I enjoy understanding and building systems that solve problems or make things easier. Areas I'm interested in:
+                </p>
+                <ul className="mt-4 sm:mt-5 flex flex-wrap gap-2 sm:gap-3">
+                  {interests.map((interest) => (
+                    <li
+                      key={interest}
+                      className="rounded-full bg-sky-500 px-4 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base font-bold text-white"
+                    >
+                      {interest}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <img
@@ -69,9 +114,18 @@ export default function Home() {
               Technologies I have worked with
             </h2>
 
-            <div className="mt-8 sm:mt-14 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-3 sm:gap-4 md:gap-6">
-              {technologies.map((t) => (
-                <Technology key={t.name} name={t.name} icon={t.icon} />
+            <div className="mt-8 sm:mt-14 max-w-5xl mx-auto flex flex-col gap-10 sm:gap-14">
+              {techCategories.map((category) => (
+                <div key={category.title}>
+                  <h3 className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl font-semibold text-slate-200">
+                    {category.title}
+                  </h3>
+                  <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
+                    {category.items.map((t) => (
+                      <Technology key={t.name} name={t.name} icon={t.icon} />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

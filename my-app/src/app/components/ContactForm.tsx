@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -12,7 +12,6 @@ export default function ContactForm() {
   const [messageError, setMessageError] = useState("");
 
   const [sent, setSent] = useState(false);
-  const loadedAt = useRef(Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -52,8 +51,8 @@ export default function ContactForm() {
     formData.append("name", name);
     formData.append("email", email);
     formData.append("message", message);
-    formData.append("website", "");
-    formData.append("loadedAt", String(loadedAt.current));
+    const honeypot = e.currentTarget.elements.namedItem("website") as HTMLInputElement | null;
+    formData.append("website", honeypot?.value ?? "");
 
     const res = await fetch("/api/contact", {
       method: "POST",
